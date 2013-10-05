@@ -1,1 +1,54 @@
-test
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>gMap to GPX</title>
+    <style>
+        a.bookmarklet {
+             border: 1px outset #ddd; 
+             padding: 1px; 
+             vertical-align: 1px; 
+             background: #ddd; 
+             text-decoration: none; 
+             color: darkgreen;
+        }
+    </style>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://simonwhitaker.github.io/github-fork-ribbon-css/gh-fork-ribbon.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>    
+    <![endif]-->        
+</head>
+<body>
+    <div class="github-fork-ribbon-wrapper right">
+           <div class="github-fork-ribbon">
+               <a href="https://github.com/simonwhitaker/github-fork-ribbon-css">Fork me on GitHub</a>
+           </div>
+       </div>    
+    <div class="container">
+        <h1>gMapToGPX</h1>
+        <p class="lead">
+            Originally taken from <a href="http://www.elsewhere.org/journal/gmaptogpx/">http://www.elsewhere.org/journal/gmaptogpx/</a> version 6.4j: 2011.07.12<br/>
+            gMapToGPX is a simple bookmarklet that allows you to convert Google Maps driving directions into GPX format, which can then be used in a number of ways.
+            I took on this project because the original version stopped working and has not been updated for some time. The problem is that the script is heavily coupled to
+            Google Maps internal data structures and thus, when gMaps updates, it's possible that the script will stop working. 
+        </p>
+        <p>
+            Please note that this utility is designed to work on Google Maps driving/walking directions directly as well as a number of sites that are are mashups of
+            Google Maps. In my case, I originally did this because I wanted to load running maps from gmap-pedometer.com onto my Garmin.
+        </p>
+        <h3>Instructions</h3>
+        <p>
+            <ol>
+                <li>Drag the following bookmarklet <a class="bookmarklet" href="javascript:(function()%7Bvar script%3Ddocument.createElement(%27script%27)%3Bscript.src%3D%27http://seafoodbuffet.github.io/gMapToGPX/assets/javascript/gmap_to_gpx.min.js%27%3Bdocument.getElementsByTagName(%27head%27)%5B0%5D.appendChild(script)%3B%7D)()">gMapToGPX</a> to your browser toolbar</li>
+                <li>Visit a site that has a set of Google Maps directions, such as <a href="www.gmap-pedometer.com">gmap-pedometer.com</a>, here's <a href="http://www.gmap-pedometer.com/?r=5050368">an example</a></li>
+                <li>You'll get a window with the GPX context, select all, copy and paste to a file (named .gpx or .txt) and load into your favorite GPX tool</li>
+                <li>If you need to convert a GPX to a Garmin TCX, I used <a href="http://www.gpsies.com/convert.do">www.gpsies.com</a></li>
+            </ol>
+        </p>
+    </div><!-- /.container -->
+</body>
+</html>
+    
