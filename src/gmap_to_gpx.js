@@ -1,4 +1,9 @@
 /*
+  gMapToGPX seafoodbuffet <cheng@barelycode.com>
+  fixed for newest version of Google Maps, minified, served off of GitHub CDN
+  http://github.com/seafoodbuffet/gMapToGPX
+
+  Based off of
   GMapToGPX 6.4j
   Originally based in part on the "Improved MSN and Google GPS GPX Waypoint 
   Extraction" bookmarklet described at http://badsegue.org/archives/2005/04/21/
