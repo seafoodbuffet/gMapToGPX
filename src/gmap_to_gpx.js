@@ -483,8 +483,8 @@ if ((document.location.hostname.indexOf('gmap-pedometer') >= 0) && (qtype==0) &&
 	    } else if (dtype == "points") {
 		t+= '      <wpt ';
 	    }
-	    t+= 'lat="' + round(gLatLngArray[i].y) + '" ' +
-		'lon="' + round(gLatLngArray[i].x) + '">\n';
+	    t+= 'lat="' + round(gLatLngArray[i].lat) + '" ' +
+		'lon="' + round(gLatLngArray[i].lng) + '">\n';
 
 
 	    if ( elevationArrayTested == true ) {
