@@ -1,0 +1,39 @@
+.menubar ul 
+{
+	margin:0; 
+}
+.menubar li 
+{
+	display:inline;
+	list-style:none;
+	margin:0 5px 0 5px;
+}
+
+.menubar a , .menubar a:visited 
+{
+	padding: 1px 10px 1px 10px;
+	text-decoration:none;
+    background-color: #3399CC;
+	color:white;
+	font-family:Verdana, Sans-Serif;
+	font-size:9pt;
+	-moz-border-radius:10px;
+	border:2px inset black;
+	font-weight: bolder;
+}
+
+.menubar select
+{
+    background-color: transparent;
+    color: #333333;
+    margin-top: 2px;
+    border: 1px solid #efefef;
+}
+
+.menubar a:hover , .menubar select:hover 
+{
+	border:2px outset black;
+   	background-color:white;
+	color:blue;
+	text-decoration:none;
+}
