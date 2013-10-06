@@ -1,5 +1,5 @@
 /*
-  gMapToGPX seafoodbuffet <cheng@barelycode.com>
+  gMapToGPX by seafoodbuffet <cheng@barelycode.com>
   fixed for newest version of Google Maps, minified, served off of GitHub CDN
   http://github.com/seafoodbuffet/gMapToGPX
 
@@ -26,7 +26,7 @@
 */
 
 var error = 0;
-var version = '6.4j';
+var version = '6.4.11';
 var googledoc = ""; // will hold retrieved google info
 var googleurl = "";
 var gpxvar = ""; // will hold gHomeVPage structure, even for IE
@@ -324,7 +324,7 @@ if ((document.location.hostname.indexOf('gmap-pedometer') >= 0) && (qtype==0) &&
    }
 
     if (qtype==0) {
-	errorbox('<p>There doesn\'t seem to be any extractable data on this page.</p><p>If there is, but it\'s not detected, please visit the <a href="http://www.elsewhere.org/GMapToGPX/">project homepage</a> and leave a bug report, including a link to the page you\'re on right now.</p><p><strong>Note:</strong> Google Maps mashups (that is, a page with a Google Map on it, but not at google.com) do not automatically work with this utility. If you would like to see GMapToGPX work with a Google Maps mashup site you maintain, please leave a comment on the project page.</p>');
+	errorbox('<p>There doesn\'t seem to be any extractable data on this page.</p><p>If there is, but it\'s not detected, please visit the <a href="http://github.com/seafoodbuffet/gMapToGPX">project homepage</a> and leave a bug report, including a link to the page you\'re on right now.</p><p><strong>Note:</strong> Google Maps mashups (that is, a page with a Google Map on it, but not at google.com) do not automatically work with this utility.</p>');
 	closebox();
 	return(0); 
     }
@@ -399,7 +399,7 @@ if ((document.location.hostname.indexOf('gmap-pedometer') >= 0) && (qtype==0) &&
     /* This part of the GPX is going to be the same no matter what. */
     t+= '<?xml version="1.0" encoding="' + charset + '" ?>\n' + 
 	'<gpx version="1.1"\n' + 
-	'     creator="GMapToGPX ' + version + ' - http://www.elsewhere.org/GMapToGPX/"\n' + 
+	'     creator="gMapToGPX ' + version + ' - http://github.com/seafoodbuffet/gMapToGPX"\n' + 
 	'     xmlns="http://www.topografix.com/GPX/1/1"\n' + 
 	'     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\n' + 
 	'     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">\n';
@@ -659,7 +659,7 @@ if ((document.location.hostname.indexOf('gmap-pedometer') >= 0) && (qtype==0) &&
 		'   </wpt>\n';
 	}
     } else {
-	errorbox('An unknown error occurred. Please leave a bug report at the <a href="http://www.elsewhere.org/GMapToGPX/">project homepage</a> and include a link to the page you\'re on right now.');
+	errorbox('An unknown error occurred. Please leave a bug report at the <a href="http://github.com/seafoodbuffet/gMapToGPX">project homepage</a> and include a link to the page you\'re on right now.');
 	error = 1;
     }
     
@@ -705,20 +705,20 @@ function closebox() {
 
 
 function loadabout() {
-    var about = '<span style="font-size: x-small;"><p><a href="http://www.elsewhere.org/GMapToGPX/">GMapToGPX</a> Extractor ' + version + '<br />';
-    about += 'A project of <a href="http://www.elsewhere.org/">Communications From Elsewhere</a></p>';
+    var about = '<span style="font-size: x-small;"><p><a href="http://github.com/seafoodbuffet/gMapToGPX">gMapToGPX</a> Extractor ' + version + '<br />';
+    about += 'A project of <a href="http://www.barelycode.com">barelycode.com</a></p>';
     about += '<p>Usage:<ul>';
     about += '<li>"Track" displays driving directions as a GPX track with one or more track segments, depending on the number of milestones in the directions.</li>';
     about += '<li>"Route" displays driving directions as one or more GPX routes.</li>';
     about += '<li>"Full" displays driving directions as a GPX track containing one or more track segments, each of which contains every single point on the line Google Maps draws to represent the segment. Use with caution, as long routes may produce huge results.</li>';
     about += '<li>"Points" displays driving directions as a list of waypoints for each turn in the route. The waypoints will be in order, but this option is mainly intended for devices which can only handle waypoints, not tracks or routes. In most cases, you should use another option.</li>';
     about += '<li>For single or multiple address searches, there are no display options. You get a list of individual waypoints.</li>';
-    about += '</ul>If you have questions or comments, please visit the <a href="http://www.elsewhere.org/GMapToGPX/">project homepage</a>.</p></span>';
+    about += '</ul>If you have questions or comments, please visit the <a href="http://github.com/seafoodbuffet/gMapToGPX">project homepage</a>.</p></span>';
     showstatusdiv(about);
 }
 
 function errorbox(a) {
-    var err = '<a href="http://www.elsewhere.org/GMapToGPX/">GMapToGPX</a> v' + version + " (ERROR)<br />" + a;
+    var err = '<a href="http://github.com/seafoodbuffet/gMapToGPX">gMapToGPX</a> v' + version + " (ERROR)<br />" + a;
     showstatusdiv(err);
 }
 
@@ -813,7 +813,7 @@ if (! navigator.userAgent.match(/Safari/)) {
     var styleObject = document.getElementsByTagName("HEAD")[0].appendChild(document.createElement("link"));
     styleObject.rel="Stylesheet";
     styleObject.type="text/css";
-    styleObject.href="http://www.elsewhere.org/GMapToGPX/menubar.css";
+    styleObject.href="http://seafoodbuffet.github.io/assets/css/menubar.css";
     styleObject.id="sst_css";
 }
 
